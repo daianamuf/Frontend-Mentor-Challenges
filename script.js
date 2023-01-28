@@ -7,6 +7,7 @@ const challenges = [
   "single-price-grid-component",
   "social-proof-section",
   "skilled-elearning-landing-page",
+  "fylo-data-storage-component-master",
 ];
 
 const challengesList = document.querySelector(".challenges__list");

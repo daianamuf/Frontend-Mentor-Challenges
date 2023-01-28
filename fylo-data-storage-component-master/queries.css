@@ -1,0 +1,87 @@
+@media (min-width: 90.1em) {
+  html {
+    font-size: 80%;
+  }
+
+  .storage-bubble::after {
+    top: 5.7rem;
+    left: 13rem;
+  }
+}
+
+@media (max-width: 61rem) {
+  body {
+    background-size: 100% 60%;
+  }
+
+  .component {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .media-section {
+    align-self: flex-start;
+  }
+
+  .storage-bubble {
+    right: -4rem;
+    border-radius: 10px 10px 10px 0;
+  }
+
+  .storage-bubble::after {
+    border-right: 20px solid transparent;
+    border-left: 20px solid #fff;
+    top: 5.5rsem;
+    left: 0rem;
+  }
+}
+
+@media (max-width: 26.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    background: url(images/bg-mobile.png);
+    background-size: cover;
+  }
+
+  .component {
+    width: 46rem;
+    flex-direction: column;
+  }
+
+  .media-section {
+    padding: 4.5rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    align-self: center;
+  }
+
+  .storage-section {
+    padding: 4rem 4rem 6.25rem 4rem;
+  }
+
+  .storage-bubble {
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    top: 15rem;
+    right: 11.5rem;
+  }
+
+  .storage-bubble::after {
+    visibility: hidden;
+  }
+
+  .storage-grade {
+    width: 32rem;
+  }
+
+  .storage-line {
+    width: 24rem;
+  }
+
+  .limits {
+    width: 32rem;
+  }
+}

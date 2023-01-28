@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link href="queries.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+
+  <body>
+    <div class="component">
+      <div class="media-section">
+        <img src="images/logo.svg" alt="Logo" class="logo" />
+        <div class="icons">
+          <img
+            src="images/icon-document.svg"
+            alt="Document icon"
+            class="icon icon-doc"
+          />
+          <img
+            src="images/icon-folder.svg"
+            alt="Folder icon"
+            class="icon icon-file"
+          />
+          <img
+            src="images/icon-upload.svg"
+            alt="Cloud icon"
+            class="icon icon-cloud"
+          />
+        </div>
+      </div>
+
+      <div class="storage-section">
+        <div class="info">
+          You’ve used
+          <span class="space"> 815 GB </span>
+          of your storage
+        </div>
+
+        <div class="storage-bubble">
+          <p class="number">185</p>
+          <p class="space-left">GB Left</p>
+        </div>
+
+        <div class="storage-grade">
+          <div class="storage-line"></div>
+        </div>
+
+        <div class="limits">
+          <div class="start">0 GB</div>
+          <div class="end">1000 GB</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
