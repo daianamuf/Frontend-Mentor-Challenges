@@ -1,0 +1,58 @@
+@media (max-width: 48em) {
+  .sedans,
+  .suvs,
+  .luxury {
+    width: 25rem;
+    padding: 4rem;
+  }
+
+  .sedans p,
+  .suvs p,
+  .luxury p {
+    margin-bottom: 5rem;
+  }
+
+  .btn:link,
+  .btn:visited {
+    padding-top: 1.1rem;
+  }
+}
+
+@media (max-width: 27em) {
+  html {
+    font-size: 50%;
+  }
+
+  .card {
+    flex-direction: column;
+    margin: auto;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .sedans,
+  .suvs,
+  .luxury {
+    width: 32.7rem;
+    height: 44.2rem;
+  }
+
+  .sedans p,
+  .suvs p,
+  .luxury p {
+    margin-bottom: 2.5rem;
+  }
+
+  .sedans {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    /* quick fix da nu s sigura deci o sa mai revin ca acum e 1 dimineata si n am chef */
+  }
+
+  .luxury {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+}

@@ -1,0 +1,100 @@
+@media (max-width: 64em) {
+  section {
+    transform: translate(-30%, 30%);
+  }
+}
+
+@media (max-width: 48em) {
+  section {
+    transform: translate(-10%, 30%);
+  }
+}
+
+@media (max-width: 27em) {
+  html {
+    font-size: 50%;
+  }
+
+  section {
+    width: 31.1rem;
+    grid-template-columns: 31.1rem;
+    grid-template-rows: 26.7rem 22.8rem 22.7rem;
+    transform: translate(-35%, 20%);
+  }
+
+  .join {
+    padding: 2.8rem 2.4rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: -0.25px;
+    margin-bottom: 2rem;
+  }
+
+  .money-back {
+    font-size: 1.5rem;
+    letter-spacing: -0.19px;
+  }
+
+  .intro {
+    font-size: 1.4rem;
+    letter-spacing: -0.17px;
+    line-height: 1.7;
+  }
+
+  .subscription {
+    grid-row: 2/3;
+    height: 28rem;
+    padding: 3.75rem 3.12rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    letter-spacing: -0.23px;
+    margin-bottom: 2rem;
+  }
+
+  .price {
+    font-size: 3.2rem;
+    letter-spacing: -0.4px;
+    font-weight: 400;
+  }
+
+  .month {
+    font-size: 1.6rem;
+  }
+
+  .btn:link,
+  .btn:visited {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1.2rem 9.1rem;
+  }
+
+  .access {
+    margin-bottom: 3.2rem;
+  }
+
+  .why-us {
+    grid-row: 3/4;
+    padding: 2.4rem 2.4rem;
+  }
+
+  .list {
+    font-size: 1.4rem;
+    letter-spacing: -0.17px;
+  }
+}
+
+@media (max-width: 24em) {
+  section {
+    transform: translate(-24%, 20%);
+  }
+}
+
+@media (max-width: 20em) {
+  section {
+    transform: translate(-14%, 20%);
+  }
+}

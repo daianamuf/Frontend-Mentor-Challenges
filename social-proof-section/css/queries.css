@@ -1,0 +1,183 @@
+@media (max-width: 64em) {
+  .header {
+    gap: 0.8rem;
+  }
+  .heading {
+    max-width: 38rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  .stars {
+    grid-template-columns: 45rem;
+  }
+
+  .rated {
+    width: 39rem;
+    padding: 2rem;
+  }
+
+  .rated-text {
+    font-size: 1.5rem;
+  }
+  .reviews-cards {
+    grid-template-columns: repeat(3, 27.5rem);
+    gap: 2rem;
+  }
+
+  .rev {
+    width: 27.5rem;
+    font-size: 1.6rem;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .heading {
+    max-width: 33rem;
+  }
+
+  h1 {
+    font-size: 3.9rem;
+  }
+
+  .intro {
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+  }
+
+  .stars {
+    grid-template-columns: 32rem;
+    grid-template-rows: repeat(3, 4.4rem);
+    gap: 1.4rem;
+  }
+
+  .rated {
+    width: 32rem;
+    height: 4.4rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .rated-text {
+    margin-left: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  img {
+    width: 1.3rem;
+    height: 1.4rem;
+  }
+
+  .reviews-cards {
+    grid-template-columns: repeat(4, 12.8rem);
+    grid-template-rows: repeat(2, 23rem);
+    row-gap: 1rem;
+    justify-content: center;
+  }
+
+  .second-review {
+    grid-column: 3/5;
+  }
+
+  .third-review {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+}
+
+@media (max-width: 27em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    background: top left url(/images/bg-pattern-top-mobile.svg),
+      bottom right url(/images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    min-height: auto;
+  }
+
+  .section {
+    width: 40.9rem;
+    height: 191.3rem;
+    transform: translate(-50%, 5%);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .intro {
+    height: 11.3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .rated {
+    flex-direction: column;
+    width: 40.9rem;
+    height: 9.8rem;
+  }
+
+  .stars {
+    grid-template-columns: 40.9rem;
+    grid-template-rows: repeat(3, 9.8rem);
+    row-gap: 2rem;
+    margin-bottom: 6.1rem;
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .rated-text {
+    font-size: 2.2rem;
+  }
+
+  .reviews-cards {
+    grid-template-columns: 40.9rem;
+    grid-template-rows: repeat(3, 31rem);
+    row-gap: 2rem;
+  }
+
+  .rev {
+    grid-column: 1/2;
+    width: 40.9rem;
+    height: 31rem;
+    padding: 4rem;
+  }
+
+  .first-review {
+    grid-row: 1/2;
+  }
+
+  .second-review {
+    grid-row: 2/3;
+  }
+
+  .third-review {
+    grid-row: 3/4;
+  }
+
+  .rev img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  h3,
+  .review {
+    font-size: 2.2rem;
+  }
+}

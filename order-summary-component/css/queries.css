@@ -1,0 +1,31 @@
+@media (max-width: 27em) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    width: 43rem;
+    height: 73rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .container {
+    width: 36rem;
+    height: 64rem;
+  }
+
+  .summary-text {
+    font-size: 1.5rem;
+    margin: 2rem 7rem;
+  }
+
+  .plan-box {
+    padding: 1.5rem 2rem;
+  }
+
+  .payment:link,
+  .payment:visited {
+    padding: 1.2rem 7rem;
+  }
+}
