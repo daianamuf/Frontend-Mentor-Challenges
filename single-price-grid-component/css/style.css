@@ -12,6 +12,10 @@ body {
   font-family: "Karla", sans-serif;
   background-color: hsl(204, 43%, 93%);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 section {
@@ -20,14 +24,8 @@ section {
   grid-template-columns: 32rem 32rem;
   grid-template-rows: 22rem 26rem;
   background-color: #fff;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-60%, 30%);
   box-shadow: 0px 15px 30px #0051ab26;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .join {

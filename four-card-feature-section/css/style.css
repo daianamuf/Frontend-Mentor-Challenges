@@ -7,21 +7,30 @@
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   color: hsl(234, 12%, 34%);
-  position: relative;
   background-color: hsl(0, 0%, 98%);
-  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
   font-size: 1.8rem;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.2;
   letter-spacing: -1;
-  margin-top: 3rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 header::first-line {
@@ -29,7 +38,7 @@ header::first-line {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 3.5rem;
   letter-spacing: 0.25px;
 }
 
@@ -37,21 +46,16 @@ h1 {
   text-align: center;
   color: hsl(229, 6%, 66%);
   font-size: 1.5rem;
-  margin-left: 45rem;
-  margin-right: 45rem;
-  margin-bottom: 6.4rem;
+  width: 45rem;
+  margin-bottom: 4rem;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: 35rem 35rem 35rem;
-  grid-template-rows: 11rem 11rem 11rem 11rem;
-  gap: 3rem;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 23%);
+  grid-template-columns: repeat(3, 35rem);
+  grid-template-rows: repeat(4, 10rem);
+  column-gap: 3rem;
+  row-gap: 2rem;
 }
 
 .supervisor,
@@ -70,6 +74,7 @@ h1 {
 
 h3 {
   font-size: 2.1rem;
+  margin-bottom: 1rem;
 }
 
 .supervisor p,
@@ -78,9 +83,8 @@ h3 {
 .karma p {
   color: hsl(229, 6%, 66%);
   font-size: 1.3rem;
-  margin-top: 1rem;
   letter-spacing: 0.09px;
-  line-height: 2;
+  line-height: 1.6;
 }
 
 .supervisor-icon,
