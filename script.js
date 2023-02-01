@@ -8,6 +8,7 @@ const challenges = [
   "social-proof-section",
   "skilled-elearning-landing-page",
   "fylo-data-storage-component-master",
+  "huddle-landing-page-with-single-introductory-section-master",
 ];
 
 const challengesList = document.querySelector(".challenges__list");
