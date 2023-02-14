@@ -1,0 +1,93 @@
+@media (max-width: 56em) {
+  .background-left {
+    left: -19rem;
+  }
+
+  .background-right {
+    right: -19rem;
+  }
+
+  .display {
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 49em) {
+  .background-left {
+    left: -30rem;
+  }
+
+  .background-right {
+    right: -30rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .info {
+    width: 39rem;
+    text-align: center;
+  }
+
+  .display {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 39em) {
+  .background-left {
+    top: -10rem;
+  }
+
+  .background-right {
+    bottom: -10rem;
+  }
+
+  .content {
+    gap: 6rem;
+  }
+
+  .info {
+    width: 36rem;
+  }
+}
+
+@media (max-width: 24em) {
+  html {
+    font-size: 50%;
+  }
+
+  .content {
+    gap: 9rem;
+  }
+
+  .background-left {
+    height: 50rem;
+    left: -30rem;
+    top: 0;
+  }
+
+  .background-right {
+    height: 50rem;
+    right: -30rem;
+    bottom: 0;
+  }
+
+  .display {
+    height: 55.4rem;
+  }
+
+  .chat-section {
+    height: 46.2rem;
+  }
+
+  .type-bar {
+    width: 20.5rem;
+  }
+
+  .info {
+    width: 34rem;
+  }
+}
