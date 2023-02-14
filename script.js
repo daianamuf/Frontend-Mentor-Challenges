@@ -9,6 +9,7 @@ const challenges = [
   "skilled-elearning-landing-page",
   "fylo-data-storage-component-master",
   "huddle-landing-page-with-single-introductory-section-master",
+  "chat-app-css-illustration-master",
 ];
 
 const challengesList = document.querySelector(".challenges__list");
