@@ -37,57 +37,25 @@
 }
 
 @media (max-width: 39em) {
-  .background-left {
-    top: -10rem;
-  }
-
-  .background-right {
-    bottom: -10rem;
-  }
-
-  .content {
-    gap: 6rem;
-  }
-
-  .info {
-    width: 36rem;
-  }
-}
-
-@media (max-width: 24em) {
   html {
     font-size: 50%;
   }
 
   .content {
-    gap: 9rem;
-  }
-
-  .background-left {
-    height: 50rem;
-    left: -30rem;
-    top: 0;
-  }
-
-  .background-right {
-    height: 50rem;
-    right: -30rem;
-    bottom: 0;
+    margin-top: 6rem;
+    gap: 6rem;
   }
 
   .display {
-    height: 55.4rem;
+    height: 55rem;
+    margin-bottom: 3rem;
   }
 
   .chat-section {
-    height: 46.2rem;
-  }
-
-  .type-bar {
-    width: 20.5rem;
+    height: 46rem;
   }
 
   .info {
-    width: 34rem;
+    width: 36rem;
   }
 }

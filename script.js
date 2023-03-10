@@ -17,10 +17,14 @@ const challengesList = document.querySelector(".challenges__list");
 challenges.forEach((challenge) => {
   const listItem = document.createElement("li");
   const link = document.createElement("a");
+  const img = document.createElement("img");
 
   link.href = `./${challenge}/index.html`;
   link.innerText = challenge;
 
+  img.src = `${challenge}/design/desktop-design.jpg`;
+
+  link.append(img);
   listItem.appendChild(link);
   challengesList.appendChild(listItem);
 });

@@ -12,11 +12,12 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 1.6rem;
   line-height: 11px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fafafa;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .content {

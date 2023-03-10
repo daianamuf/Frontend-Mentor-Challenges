@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  color: rgb(83, 75, 82);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 70rem);
+  column-gap: 3rem;
+  row-gap: 7rem;
+}
+
+ul li:nth-last-child(2) {
+  font-size: 2.1rem;
+}
+
+img {
+  max-width: 50rem;
+  height: auto;
+  aspect-ratio: 3/2;
+  box-shadow: 1px 10px 41px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+a:link,
+a:visited {
+  text-transform: capitalize;
+  color: rgba(45, 35, 46);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transition: all 1s;
+}
+
+a:hover,
+a:active {
+  transform: translateY(5rem);
+  backface-visibility: hidden;
+}
+
+a:link img,
+a:visited img {
+  transition: all 0.3s;
+}
+
+a:hover img,
+a:active img {
+  max-width: 60rem;
+  box-shadow: 2px 10px 41px 3px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10rem);
+}
+
+ul li:nth-last-child(2):hover,
+ul li:nth-last-child(2):active {
+  font-size: 1rem;
+}
