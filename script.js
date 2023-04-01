@@ -13,6 +13,19 @@ const challenges = [
 ];
 
 const challengesList = document.querySelector(".challenges__list");
+const listOfElements = document.querySelectorAll("li");
+
+// To be used in the future.
+const isMobile = () => {
+  if (
+    navigator.userAgent.match("/Android/i") ||
+    navigator.userAgent.match("/Iphone/i")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 challenges.forEach((challenge) => {
   const listItem = document.createElement("li");

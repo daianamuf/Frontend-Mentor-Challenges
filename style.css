@@ -78,3 +78,47 @@ ul li:nth-last-child(2):hover,
 ul li:nth-last-child(2):active {
   font-size: 1rem;
 }
+
+.animation img {
+  max-width: 60rem;
+  box-shadow: 2px 10px 41px 3px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10rem);
+}
+.animation a {
+  transform: translateY(5rem);
+}
+
+@media (max-width: 26.8em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    grid-template-columns: minmax(min-content, max-content);
+  }
+
+  img {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 23.5em) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    max-width: 41rem;
+  }
+}
