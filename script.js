@@ -10,6 +10,8 @@ const challenges = [
   "fylo-data-storage-component-master",
   "huddle-landing-page-with-single-introductory-section-master",
   "chat-app-css-illustration-master",
+  "interactive-rating-component-main",
+  "faq-accordion-card-main",
 ];
 
 const challengesList = document.querySelector(".challenges__list");

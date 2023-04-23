@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Overpass";
+  font-size: 1.5rem;
+  color: hsl(217, 12%, 63%);
+  background: hsl(216, 12%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.rating-state {
+  background: hsl(213, 19%, 18%);
+  padding: 3.2rem;
+  width: 41rem;
+  border-radius: 30px;
+}
+
+.icon {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.icon-star {
+  z-index: 11;
+  position: relative;
+}
+
+.icon::before {
+  content: "";
+  background: #3b424b;
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+
+.heading {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.rating-text {
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.rating-grades {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 1.5rem 2rem;
+  border-radius: 50%;
+  background-color: #3b424b;
+  color: hsl(217, 12%, 63%);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(216, 12%, 54%);
+}
+
+.active {
+  color: hsl(0, 0%, 100%);
+  background-color: #fb7413;
+}
+
+.submit-btn {
+  cursor: pointer;
+  padding: 1.6rem 14rem;
+  background-color: #fb7413;
+  border: none;
+  border-radius: 30px;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.submit-btn:active {
+  color: #fb7413;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.thank-you-state {
+  background: #252d37;
+  padding: 4.8rem 3.2rem;
+  width: 41rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thank-you-img {
+  margin-bottom: 2rem;
+}
+
+.final-rating-text {
+  color: #fb7413;
+  background-color: #3b424b;
+  padding: 0.5rem 1.3rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+
+.thank-you-heading {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you-text {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.display-none {
+  display: none;
+}
+
+@media (max-width: 26.5em) {
+  html {
+    font-size: 50%;
+  }
+}
