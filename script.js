@@ -12,6 +12,7 @@ const challenges = [
   "chat-app-css-illustration-master",
   "interactive-rating-component-main",
   "faq-accordion-card-main",
+  "intro-component-with-signup-form-master",
 ];
 
 const challengesList = document.querySelector(".challenges__list");

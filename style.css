@@ -41,6 +41,7 @@ img {
   max-width: 50rem;
   height: auto;
   aspect-ratio: 3/2;
+  object-fit: cover;
   box-shadow: 1px 10px 41px 3px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }

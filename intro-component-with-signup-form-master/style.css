@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background: url(/images/bg-intro-desktop.png), hsl(0, 100%, 74%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  padding: 12.1rem 16.5rem;
+}
+
+.intro-main {
+  width: 50rem;
+}
+
+.heading {
+  font-size: 5rem;
+  line-height: 55px;
+  margin-bottom: 2.8rem;
+}
+
+.intro-text {
+  line-height: 26px;
+}
+
+.subscription-price {
+  font-size: 1.5rem;
+  padding: 1.8rem 11rem 2.3rem 11rem;
+  background: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2.3rem;
+}
+
+.form {
+  width: 54.1rem;
+  height: 56.4rem;
+  border-radius: 10px;
+  background: #fff;
+  padding: 4rem;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.input-el {
+  margin-bottom: 2.1rem;
+  position: relative;
+}
+
+.form-el {
+  width: 46.1rem;
+  height: 5.6rem;
+  border-radius: 5px;
+  margin-bottom: 0.8rem;
+  border: solid 0.09rem hsl(246, 25%, 77%);
+  padding: 2rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: hsl(249, 10%, 26%);
+}
+
+.input-el.valid .form-el {
+  border: solid 0.2rem hsl(154, 59%, 51%);
+}
+
+.input-el.error .form-el {
+  border: solid 0.09rem hsl(0, 100%, 74%);
+}
+
+.form-el:not(:nth-child(5)):focus {
+  outline: none;
+  border: solid 0.3rem hsl(248, 32%, 49%);
+}
+
+.input-el p {
+  font-size: 1.1rem;
+  color: hsl(0, 100%, 74%);
+  font-weight: 500;
+  font-style: italic;
+  text-align: right;
+  display: none;
+}
+
+.input-el.error p {
+  display: block;
+}
+
+.input-el img {
+  position: absolute;
+  width: 2.4rem;
+  z-index: 1;
+  top: 1.4rem;
+  right: 2rem;
+  display: none;
+}
+
+.input-el.error img {
+  display: inline;
+}
+
+.submit-btn {
+  color: #fff;
+  background: hsl(154, 59%, 51%);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.submit-btn:hover {
+  background: hsl(154, 65%, 68%);
+  transform: translateY(-0.1rem);
+}
+
+.submit-btn:active {
+  box-shadow: none;
+  background: hsl(154, 59%, 51%);
+  transform: translateY(0.2rem);
+}
+
+.form-text {
+  color: hsl(246, 25%, 77%);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-text a {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 26.6em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    background: url(/images/bg-intro-mobile.png), hsl(0, 100%, 74%);
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .intro-main {
+    margin-right: 0;
+    width: 39rem;
+    margin-bottom: 9.3rem;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+
+  .subscription-price,
+  .form {
+    width: 40.9rem;
+  }
+
+  .form {
+    padding: 3rem;
+  }
+
+  .subscription-price {
+    text-align: center;
+  }
+
+  .form-el {
+    width: 35rem;
+  }
+
+  .submit-btn {
+    margin-bottom: 2rem;
+  }
+}
