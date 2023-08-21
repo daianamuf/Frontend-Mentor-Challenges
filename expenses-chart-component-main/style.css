@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Dm Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8e9dd;
+}
+
+.balance {
+  width: 43rem;
+  height: 10rem;
+  background: #ec775f;
+  border-radius: 10px;
+  color: #fff;
+  padding: 2rem 3rem;
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.balance::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border: #fff solid 2px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.balance::after {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.balance-text {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.balance-value {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.spending {
+  width: 43rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+}
+
+.spending__heading {
+  font-size: 2.4rem;
+}
+
+.spending__days {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  /* gap: 2.4rem; */
+  width: 36rem;
+  height: 20rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.spending__days::after {
+  content: "";
+  width: 34rem;
+  height: 0.1rem;
+  background-color: #f8e9dd;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.day {
+  font-size: 1.2rem;
+  color: #93867b;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 0rem 1rem;
+}
+
+.spending__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.total-text {
+  font-size: 1.2rem;
+  color: #93867b;
+  margin-bottom: 0.5rem;
+}
+
+.total-value {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.last-month {
+  padding: 1rem;
+}
+
+.last-month-value {
+  text-align: end;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.last-month-text {
+  font-size: 1.2rem;
+  color: #93867b;
+}
+
+.day-chart {
+  position: relative;
+}
+
+.chart-el {
+  position: absolute;
+  width: 3.6rem;
+  height: 3rem;
+  border-radius: 5px;
+  background: #ec775f;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-el.max {
+  background: #76b5bc;
+}
+
+.chart-el:hover {
+  opacity: 80%;
+}
+
+.value-el {
+  font-size: 1.4rem;
+  color: #fff;
+  background: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  top: -3.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+.chart-el:hover .value-el {
+  visibility: visible;
+}
+
+@media (max-width: 26.6em) {
+  html {
+    font-size: 50%;
+  }
+
+  .balance {
+    width: 38rem;
+  }
+
+  .spending {
+    width: 38rem;
+    padding: 1.4rem;
+  }
+
+  .spending__days {
+    gap: 0.8rem;
+    width: 35rem;
+  }
+  .chart-el {
+    width: 3.2rem;
+  }
+}

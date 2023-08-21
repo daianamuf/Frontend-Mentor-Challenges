@@ -31,7 +31,7 @@ body {
   width: 92.1rem;
   height: 51rem;
 
-  background: url(/images/bg-pattern-desktop.svg) left, white;
+  background: url(images/bg-pattern-desktop.svg) left, white;
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -42,14 +42,14 @@ body {
 }
 
 .accordion-component::after {
-  content: url(/images/illustration-box-desktop.svg);
+  content: url(images/illustration-box-desktop.svg);
   position: absolute;
   top: 43%;
   left: -10rem;
 }
 
 .accordion-component::before {
-  content: url(/images/illustration-woman-online-desktop.svg);
+  content: url(images/illustration-woman-online-desktop.svg);
   position: absolute;
   top: 15%;
   left: -4rem;
@@ -73,7 +73,7 @@ body {
 }
 
 .question::before {
-  content: url(/images/icon-arrow-down.svg);
+  content: url(images/icon-arrow-down.svg);
   position: absolute;
   right: 4rem;
   transition: all 0.4s;
@@ -118,7 +118,7 @@ body {
   }
 
   .accordion-component {
-    background: url(/images/bg-pattern-mobile.svg) top, white;
+    background: url(images/bg-pattern-mobile.svg) top, white;
     background-size: 70%;
     background-repeat: no-repeat;
     width: 45rem;
@@ -130,7 +130,7 @@ body {
   }
 
   .accordion-component::before {
-    content: url(/images/illustration-woman-online-mobile.svg);
+    content: url(images/illustration-woman-online-mobile.svg);
     top: -12rem;
     left: 50%;
     transform: translateX(-50%);

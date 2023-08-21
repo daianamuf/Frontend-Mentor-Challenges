@@ -13,6 +13,7 @@ const challenges = [
   "interactive-rating-component-main",
   "faq-accordion-card-main",
   "intro-component-with-signup-form-master",
+  "expenses-chart-component-main",
 ];
 
 const challengesList = document.querySelector(".challenges__list");
