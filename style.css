@@ -116,11 +116,23 @@ ul li:nth-child(8):active {
 }
 
 @media (max-width: 23.5em) {
+  h1 {
+    font-size: 3rem;
+  }
   ul {
     grid-template-columns: 1fr;
   }
 
   img {
     max-width: 41rem;
+  }
+}
+
+@media (max-width: 20em) {
+  body {
+    font-size: 1.8rem;
+  }
+  img {
+    max-width: 36rem;
   }
 }
