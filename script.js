@@ -14,6 +14,7 @@ const challenges = [
   "faq-accordion-card-main",
   "intro-component-with-signup-form-master",
   "expenses-chart-component-main",
+  "advice-generator-app-main",
 ];
 
 const challengesList = document.querySelector(".challenges__list");
