@@ -1,0 +1,746 @@
+:root {
+  --primary-color: hsl(176, 50%, 47%);
+  --primary-color-dark: hsl(176, 72%, 28%);
+  --grey-color: hsl(0, 0%, 48%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000;
+  background-color: hsl(0, 0%, 90%);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  padding: 3rem 8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+.nav-link:link,
+.nav-link:visited {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-section {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-bg {
+  width: 100%;
+  height: auto;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 25rem;
+  width: 60rem;
+}
+
+.intro-section {
+  background-color: #fff;
+  margin-bottom: 2rem;
+  height: 20rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+}
+
+.intro-section::before {
+  content: url("images/logo-mastercraft.svg");
+  position: absolute;
+  top: -3.5rem;
+}
+
+.intro-section h1 {
+  font-size: 2.8rem;
+  letter-spacing: -1px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  color: var(--grey-color);
+  margin-bottom: 3rem;
+}
+
+.intro-btns {
+  display: flex;
+  gap: 20rem;
+}
+.intro-btns button {
+  width: 16rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.back-project_btn {
+  background: var(--primary-color);
+  color: #fff;
+  transition: all 0.3s;
+  padding: 1.4rem 2.4rem;
+}
+
+.back-project_btn:hover {
+  background: var(--primary-color-dark);
+}
+
+.bookmark_btn {
+  color: var(--grey-color);
+  position: relative;
+  padding-left: 3rem;
+  transition: all 0.3s;
+}
+
+.bookmark_btn::before {
+  content: url("images/icon-bookmark.svg");
+  position: absolute;
+  top: -0.7rem;
+  left: -1rem;
+  transform: scale(80%);
+}
+
+.bookmark_btn:hover {
+  opacity: 80%;
+}
+
+.stats-section {
+  background-color: #fff;
+  margin-bottom: 5rem;
+  height: 15rem;
+  border-radius: 5px;
+  display: flex;
+  padding: 3rem;
+  gap: 8rem;
+  position: relative;
+}
+
+.stats-bar {
+  content: "";
+  width: 50rem;
+  height: 1rem;
+  border-radius: 10px;
+  background: var(--grey-color);
+  position: absolute;
+  bottom: 3.2rem;
+  opacity: 20%;
+}
+.grade-bar {
+  content: "";
+  width: 38rem;
+  height: 1rem;
+  border-radius: 10px;
+  background: var(--primary-color);
+  position: absolute;
+  bottom: 3.2rem;
+}
+
+.value {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.stat {
+  position: relative;
+}
+
+.stat::after {
+  content: "";
+  height: 5rem;
+  width: 0.1rem;
+  background: var(--grey-color);
+  position: absolute;
+  top: 0;
+  right: -4rem;
+  opacity: 30%;
+}
+
+.stat:nth-last-of-type(1)::after {
+  display: none;
+}
+
+.stats-section .text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--grey-color);
+}
+
+.about-section {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  margin-bottom: 5rem;
+}
+
+.about-info h2,
+.selection-modal h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.about-text,
+.modal_text {
+  color: var(--grey-color);
+  font-size: 1.4rem;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+}
+
+.modal_text {
+  margin-bottom: 2rem;
+}
+
+.about-text span {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.option {
+  margin: 0 auto;
+  width: 52rem;
+  border: hsl(0, 0%, 90%) 2px solid;
+  border-radius: 5px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.option h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.option_title:hover {
+  color: var(--primary-color);
+}
+
+.top-text {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.option_text {
+  display: inline-block;
+  width: 47rem;
+  font-size: 1.3rem;
+  color: var(--grey-color);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.amount-left {
+  font-size: 2rem !important;
+  color: #000 !important;
+  font-weight: 700;
+}
+.left p {
+  font-size: 1.2rem;
+  color: var(--grey-color);
+}
+
+.option_btn {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  width: 12rem;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option_btn:hover {
+  background: var(--primary-color-dark);
+}
+
+.modal-success {
+  width: 54rem;
+  height: 40rem;
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.modal-success h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.modal-success p {
+  width: 44rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--grey-color);
+  margin-bottom: 2rem;
+}
+
+.modal-success::before {
+  content: url(images/icon-check.svg);
+  margin-bottom: 4rem;
+}
+
+.modal-success_btn {
+  width: 10.7rem;
+  height: 4.8rem;
+  border-radius: 24px;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-success_btn:hover {
+  background: var(--primary-color-dark);
+}
+
+.selection-modal,
+.modal-success {
+  background: #fff;
+  position: absolute;
+  border-radius: 8px;
+  top: 30%;
+  z-index: 6;
+}
+
+.selection-modal {
+  top: 20%;
+  padding: 3rem;
+}
+
+.close_btn {
+  position: absolute;
+  right: 5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close_btn img {
+  opacity: 0.4;
+}
+
+.close_btn:hover img {
+  opacity: 1;
+}
+
+.option_heading {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.input-radio {
+  margin-right: 1rem;
+}
+
+.selection-modal .top-text {
+  position: static;
+}
+
+.selection-modal .left {
+  position: absolute;
+  right: 5%;
+}
+
+.pledge-enter {
+  margin-left: -2rem;
+  width: 52rem;
+  display: flex;
+  align-items: center;
+  border-top: hsl(0, 0%, 90%) 1px solid;
+  padding: 2rem;
+  margin-bottom: -2rem;
+}
+
+.pledge-text {
+  font-size: 1.3rem;
+  color: var(--grey-color);
+  font-weight: 500;
+  margin-right: 15rem;
+}
+
+.pledge_input {
+  width: 9rem;
+  margin-right: 2rem;
+  border: hsl(0, 0%, 90%) 2px solid;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  appearance: none;
+  padding: 1.4rem 3rem;
+  position: relative;
+}
+
+.dollar {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--grey-color);
+  opacity: 60%;
+  margin-top: -1px;
+  right: 22rem;
+  position: absolute;
+  z-index: 4;
+}
+
+.pledge_input::-webkit-outer-spin-button,
+.pledge_input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.pledge_input:focus {
+  outline: var(--primary-color) 2px solid;
+  border: none;
+}
+
+.pledge_input::placeholder {
+  color: #000;
+  opacity: 0.7;
+}
+
+.no-reward .pledge_input {
+  visibility: hidden;
+}
+
+.pledge_btn {
+  width: 9rem;
+  border: none;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 1.4rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pledge_btn:hover {
+  background: var(--primary-color-dark);
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 4;
+}
+
+.checked {
+  border: 2px solid #3cb3ab;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.disabled.option_btn {
+  background: var(--grey-color);
+}
+
+@media (max-width: 26.6em) {
+  html {
+    font-size: 50%;
+  }
+
+  .overlay {
+    height: 350vh;
+  }
+
+  .nav {
+    padding: 3rem;
+  }
+  .nav-links {
+    position: absolute;
+    top: 7rem;
+    left: 10rem;
+    flex-direction: column;
+    width: 33rem;
+    height: 20rem;
+    border-radius: 8px;
+    background: #fff;
+    padding: 2rem;
+    z-index: 8;
+  }
+
+  .nav-link:link,
+  .nav-link:visited {
+    color: #000;
+    position: relative;
+    padding-bottom: 2rem;
+  }
+
+  .nav-link::after {
+    content: "";
+    width: 33rem;
+    height: 1px;
+    background: var(--grey-color);
+    opacity: 0.5;
+    position: absolute;
+    left: -2rem;
+    bottom: 0;
+  }
+
+  .nav-link:last-of-type::after {
+    display: none;
+  }
+
+  .content-wrapper {
+    width: 40rem;
+  }
+
+  .intro-section {
+    height: 28rem;
+    text-align: center;
+    padding: 4rem;
+  }
+
+  .intro-btns {
+    gap: 2rem;
+  }
+
+  .back-project_btn {
+    width: 20rem !important;
+    padding: 2rem;
+  }
+
+  .bookmark_btn {
+    visibility: hidden;
+    margin-right: -10rem;
+  }
+
+  .bookmark_btn::before {
+    visibility: visible;
+  }
+
+  .stats-section {
+    flex-direction: column;
+
+    text-align: center;
+    height: 46rem;
+    padding: 3rem;
+  }
+
+  .stat::after {
+    width: 10rem;
+    height: 1px;
+    right: 50%;
+    transform: translateX(50%);
+    top: -5rem;
+  }
+
+  .grade-bar,
+  .stats-bar {
+    bottom: 5rem;
+  }
+
+  .stats-bar {
+    width: 34rem;
+  }
+
+  .grade-bar {
+    width: 26rem;
+  }
+
+  .about-text {
+    line-height: 20px;
+  }
+
+  .option {
+    width: 35rem;
+  }
+
+  .top-text,
+  .option_btn,
+  .left {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .option_text {
+    width: 32rem;
+    line-height: 20px;
+  }
+
+  .option_btn {
+    width: 20rem;
+    padding: 1.6rem;
+  }
+
+  .hamburger_btn,
+  .icon {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 3rem;
+    z-index: 8;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .selection-modal,
+  .modal-success {
+    width: 40rem;
+  }
+
+  .modal-success {
+    height: 45rem;
+  }
+  .modal-success p {
+    width: 30rem;
+  }
+
+  .option_select .option_text {
+    width: 28rem;
+    margin-bottom: 6rem;
+  }
+
+  .option_select .option_heading {
+    position: relative;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .option_select h3 {
+    margin-bottom: 0;
+  }
+  .option_select .left {
+    top: 18rem;
+    left: -2rem;
+  }
+
+  .pledge-enter {
+    width: 35rem;
+    padding: 3.6rem;
+    justify-content: center;
+    position: relative;
+  }
+
+  .pledge-text {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0;
+  }
+
+  .pledge_btn {
+    width: 11rem;
+    height: 4.8rem;
+  }
+
+  .no-reward .pledge_btn {
+    margin-left: -12rem;
+  }
+
+  .pledge_input {
+    width: 10rem;
+    height: 5rem;
+    padding-left: 4rem;
+  }
+
+  .dollar {
+    right: 26rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .nav-links {
+    top: 9rem;
+    left: 3rem;
+  }
+
+  .hamburger_btn,
+  .icon {
+    top: 1.4rem;
+    right: 1rem;
+  }
+}
+
+.show-menu {
+  transform: translateY(0);
+  transition: all 0.2s;
+}
+
+.hide-menu {
+  transform: translateY(-150%);
+  transition: all 0.2s;
+}

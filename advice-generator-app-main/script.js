@@ -20,4 +20,21 @@ const renderAdvice = function (id, advice) {
   adviceText.innerHTML = `"${advice}"`;
 };
 
-btn.addEventListener("click", getData);
+// btn.addEventListener("click", getData);
+
+function debounce(callback, wait) {
+  let timerId;
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      callback(...args);
+    }, wait);
+  };
+}
+
+btn.addEventListener(
+  "click",
+  debounce(() => {
+    getData();
+  }, 1000)
+);

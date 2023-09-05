@@ -15,6 +15,7 @@ const challenges = [
   "intro-component-with-signup-form-master",
   "expenses-chart-component-main",
   "advice-generator-app-main",
+  "crowdfunding-product-page-main",
 ];
 
 const challengesList = document.querySelector(".challenges__list");
