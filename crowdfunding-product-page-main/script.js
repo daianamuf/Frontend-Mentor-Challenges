@@ -71,38 +71,39 @@ backProjectsBtn.addEventListener("click", () => {
 selectRewardBtns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     openModal();
-    const arr = Array.from(selectRewardBtns);
-    const i = arr.indexOf(e.target) + 1;
+    const selectRewardBtnsArr = Array.from(selectRewardBtns);
+    const i = selectRewardBtnsArr.indexOf(e.target) + 1;
     standOptions[i].classList.toggle("checked");
     checkOption(i);
   })
 );
 
-//////// Toggle options ////////////
-standOptions.forEach((option) => {
-  option.addEventListener("click", (e) => {
+standOptions.forEach((optionCard) => {
+  const optionRadioInput = optionCard.childNodes[1];
+  const optionTitle = optionCard.childNodes[7];
+
+  //////// Toggle options ////////////
+  optionCard.addEventListener("click", (e) => {
     if (e.target.matches(".option_title") || e.target.matches(".input-radio")) {
-      if (option.classList.contains("checked")) {
-        option.classList.toggle("checked");
-        option.childNodes[1].checked = false;
-        option.childNodes[7].classList.toggle("hidden");
+      if (optionCard.classList.contains("checked")) {
+        optionCard.classList.toggle("checked");
+        optionRadioInput.checked = false;
+        optionTitle.classList.toggle("hidden");
       } else {
-        standOptions.forEach((option) => {
-          option.classList.remove("checked");
-          option.childNodes[1].checked = false;
-          option.childNodes[7].classList.add("hidden");
+        standOptions.forEach((optionCard) => {
+          optionCard.classList.remove("checked");
+          optionCard.childNodes[1].checked = false;
+          optionCard.childNodes[7].classList.add("hidden");
         });
-        option.classList.add("checked");
-        option.childNodes[1].checked = true;
-        option.childNodes[7].classList.remove("hidden");
+        optionCard.classList.add("checked");
+        optionRadioInput.checked = true;
+        optionTitle.classList.remove("hidden");
       }
     }
   });
-});
 
-//////// Render input values ////////////
-standOptions.forEach((option) => {
-  option.addEventListener("submit", (e) => {
+  //////// Render input values ////////////
+  optionCard.addEventListener("submit", (e) => {
     e.preventDefault();
     setValues();
     countStands(e.target);
@@ -114,15 +115,15 @@ const setValues = () => {
   pledgeInputs.forEach((pledge) => {
     if (!pledge.parentNode.classList.contains("hidden")) {
       const inputSum = parseInt(pledge.value.trim());
-      const currentVal = amount.innerHTML.slice(1).split(",").join("");
-      const newTotal = (parseInt(currentVal) + inputSum).toLocaleString(
-        "en-US"
-      );
+      // The total pledged value is a string that has decimals for thousands. Can't convert straight to number.
+      const currentVal = parseInt(amount.innerHTML.slice(1).replace(",", ""));
+      const newTotal = (currentVal + inputSum).toLocaleString("en-US");
+
       amount.innerHTML = `$${newTotal}`;
       pledge.value = "";
 
       if (pledge.parentNode.classList.contains("no-reward")) {
-        amount.innerHTML = `$${parseInt(currentVal).toLocaleString("en-US")}`;
+        amount.innerHTML = `$${currentVal.toLocaleString("en-US")}`;
       }
 
       const currentBackers = backers.innerHTML.split(",").join("");
