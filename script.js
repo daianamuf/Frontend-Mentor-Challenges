@@ -16,6 +16,7 @@ const challenges = [
   "expenses-chart-component-main",
   "advice-generator-app-main",
   "crowdfunding-product-page-main",
+  "tip-calculator-app-main",
 ];
 
 const challengesList = document.querySelector(".challenges__list");
