@@ -17,6 +17,7 @@ const challenges = [
   "advice-generator-app-main",
   "crowdfunding-product-page-main",
   "tip-calculator-app-main",
+  "github-user-search-app",
 ];
 
 const challengesList = document.querySelector(".challenges__list");

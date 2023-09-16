@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" defer src="/script.js"></script>
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="toggle">
+        <h1 class="toggle_heading">devfinder</h1>
+        <button class="toggle_btn">
+          <div class="toggle_btn--light">
+            <img src="assets/icon-sun.svg" alt="Sun" />
+            <p>Light</p>
+          </div>
+          <div class="toggle_btn--dark">
+            <img src="assets/icon-moon.svg" alt="Moon" />
+            <p>Dark</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="search">
+        <img class="search_icon" src="assets/icon-search.svg" alt="Search" />
+        <input
+          type="text"
+          class="search_bar"
+          placeholder="Search GitHub username..."
+        />
+        <button class="search_btn">Search</button>
+      </div>
+
+      <div class="profile">
+        <img src="" alt="Profile image" class="profile_img" />
+        <div class="profile_username">
+          <h2 class="profile_username--heading">The octcat</h2>
+          <p class="profile_username--id">@octocat</p>
+        </div>
+        <p class="profile_joined">Joined 25 jan 2011</p>
+        <p class="profile_bio">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+          voluptas dolorem iste nesciunt non dolor vero, sequi natus labore
+          ducimus nihil est nulla, eius distinctio ad quas ipsum tempora
+          recusandae!
+        </p>
+        <section class="profile_follow">
+          <div class="profile_follow--repos profile_follow--info">
+            <p>Repos</p>
+            <p>9</p>
+          </div>
+
+          <div class="profile_follow--followers profile_follow--info">
+            <p>Followers</p>
+            <p>3938</p>
+          </div>
+
+          <div class="profile_follow--following profile_follow--info">
+            <p>Following</p>
+            <p>9</p>
+          </div>
+        </section>
+
+        <section class="profile_info">
+          <div class="profile_info--location">
+            <img src="/starter-code/assets/icon-location.svg" alt="" />
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
