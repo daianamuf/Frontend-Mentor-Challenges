@@ -16,7 +16,7 @@ $white: hsl(0, 0%, 100%);
 html {
   font-size: 62.5%;
 
-  @media (max-width: 23.5em) {
+  @media (max-width: 27em) {
     font-size: 50%;
   }
 }
@@ -34,7 +34,7 @@ body {
   align-items: center;
   gap: 4rem;
 
-  @media (max-width: 23.5em) {
+  @media (max-width: 27em) {
     height: 130vh;
   }
 }
@@ -49,7 +49,7 @@ body {
   grid-template-rows: repeat(3, 13.9rem);
   column-gap: 3rem;
 
-  @media (max-width: 23.5em) {
+  @media (max-width: 27em) {
     width: 37.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: 12rem 26rem 12rem 26rem;
@@ -81,7 +81,7 @@ body {
     font-family: "Space Mono";
     cursor: pointer;
 
-    @media (max-width: 23.5em) {
+    @media (max-width: 27em) {
       width: 32rem;
     }
 
@@ -131,7 +131,7 @@ body {
     row-gap: 1.4rem;
     column-gap: 1rem;
 
-    @media (max-width: 23.5em) {
+    @media (max-width: 27em) {
       grid-template-columns: repeat(2, 14rem);
       grid-template-rows: repeat(3, 4.8rem);
     }
@@ -190,7 +190,7 @@ body {
   grid-column: 1/2;
   align-self: end;
 
-  @media (max-width: 23.5em) {
+  @media (max-width: 27em) {
     align-self: start;
   }
 
@@ -212,7 +212,7 @@ body {
     font-family: "Space Mono";
     cursor: pointer;
 
-    @media (max-width: 23.5em) {
+    @media (max-width: 27em) {
       width: 32rem;
     }
 
@@ -260,7 +260,7 @@ body {
   padding: 5rem 4rem;
   border-radius: 15px;
 
-  @media (max-width: 23.5em) {
+  @media (max-width: 27em) {
     grid-column: 1/2;
     grid-row: 4/5;
     padding: 3rem 2rem;
@@ -273,7 +273,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 23.5em) {
+    @media (max-width: 27em) {
       width: 28rem;
     }
 
@@ -296,7 +296,7 @@ body {
       font-size: 4.8rem;
       color: $cl-primary;
 
-      @media (max-width: 23.5em) {
+      @media (max-width: 27em) {
         font-size: 3.2rem;
       }
     }
@@ -304,14 +304,14 @@ body {
 
   &_tip {
     margin-bottom: 6rem;
-    @media (max-width: 23.5em) {
+    @media (max-width: 27em) {
       margin-bottom: 2rem;
     }
   }
 
   &_total {
     margin-bottom: 9rem;
-    @media (max-width: 23.5em) {
+    @media (max-width: 27em) {
       margin-bottom: 4rem;
     }
   }
@@ -328,7 +328,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
 
-    @media (max-width: 23.5em) {
+    @media (max-width: 27em) {
       width: 28rem;
     }
   }
