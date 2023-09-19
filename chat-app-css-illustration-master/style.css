@@ -12,16 +12,22 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 1.6rem;
   line-height: 11px;
+  background-color: #fafafa;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fafafa;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .content {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,8 +293,8 @@ body {
   height: 70rem;
   background-color: hsl(270, 20%, 96%);
   border-radius: 250px 250px 0 0;
-  z-index: -3;
   position: absolute;
   bottom: 0;
   right: -12rem;
+  z-index: -3;
 }
