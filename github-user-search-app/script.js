@@ -84,26 +84,26 @@ const renderUser = () => {
 
   <section class="profile_info">
     <div class="profile_info--location profile_info--el">
-      <img src="/assets/icon-location.svg" alt="" />
+      <img src="assets/icon-location.svg" alt="" />
       <p>${userData.location ? userData.location : "Not Available"}</p>
     </div>
 
     <div class="profile_info--link profile_info--el">
-      <img src="/assets/icon-website.svg" alt="" />
+      <img src="assets/icon-website.svg" alt="" />
       <a href="${userData.blog ? userData.blog : "#"}">${
     userData.blog ? userData.blog : "Not Available"
   }</a>
     </div>
 
     <div class="profile_info--twitter profile_info--el">
-      <img src="/assets/icon-twitter.svg" alt="" />
+      <img src="assets/icon-twitter.svg" alt="" />
       <p>${
         userData.twitter_username ? userData.twitter_username : "Not Available"
       }</p>
     </div>
 
     <div class="profile_info--company profile_info--el">
-      <img src="/assets/icon-company.svg" alt="" />
+      <img src="assets/icon-company.svg" alt="" />
       <p>${userData.company ? userData.company : "Not Available"}</p>
     </div>
   </section>
