@@ -1,7 +1,7 @@
 "use strict";
 import { Octokit, App } from "https://esm.sh/octokit";
 const octokit = new Octokit({
-  auth: `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`,
+  auth: `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`,
 });
 
 const {
