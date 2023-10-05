@@ -1,0 +1,471 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url(assets/fonts/inconsolata/static/Inconsolata-Regular.ttf),
+    url(assets/fonts/inconsolata/static/Inconsolata-Bold.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(assets/fonts/inter/static/Inter-Regular.ttf),
+    url(assets/fonts/inter/static/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: "Lora";
+  src: url(assets/fonts/lora/static/Lora-Regular.ttf),
+    url(assets/fonts/lora/static/Lora-Bold.ttf),
+    url(assets/fonts/lora/static/Lora-BoldItalic.ttf);
+}
+
+$cl-bg-light: #fff;
+$cl-font-light: #050505;
+$cl-bg-dark: #050505;
+$cl-font-dark: #fff;
+$cl-accent: #a445ed;
+$cl-grey-light: #f4f4f4;
+$cl-grey-dark: #1f1f1f;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.8rem;
+  background-color: $cl-bg-light;
+  color: $cl-font-light;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+  &.dark {
+    background-color: $cl-bg-dark;
+    color: $cl-font-dark;
+  }
+}
+
+.wrapper {
+  width: 74rem;
+  height: 100%;
+
+  @media (max-width: 48em) {
+    width: 64rem;
+  }
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 6rem;
+  margin-bottom: 5rem;
+
+  &_icon {
+    margin-right: 40rem;
+
+    @media (max-width: 48em) {
+      margin-right: 20rem;
+    }
+  }
+
+  &_fonts {
+    position: relative;
+
+    &--current {
+      width: 11rem;
+      display: flex;
+      justify-content: end;
+      gap: 0.5rem;
+      cursor: pointer;
+
+      &-text {
+        font-weight: bold;
+      }
+
+      &::after {
+        content: "";
+        background-color: $cl-grey-light;
+        width: 1px;
+        height: 3.2rem;
+        position: absolute;
+        right: -2rem;
+        top: -0.5rem;
+      }
+    }
+
+    &--menu {
+      position: absolute;
+      width: 14rem;
+      height: 11rem;
+      border-radius: 16px;
+      background-color: $cl-bg-light;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      top: 0;
+      left: -5rem;
+
+      &.dark {
+        background-color: $cl-grey-dark;
+      }
+
+      & button {
+        font-size: 1.6rem;
+        border: none;
+        background-color: transparent;
+        text-align: start;
+        transition: all 0.2s;
+
+        &:hover {
+          font-size: 1.8rem;
+          color: $cl-accent;
+          font-weight: bold;
+          cursor: pointer;
+
+          &.dark {
+            color: $cl-accent;
+          }
+        }
+
+        &.dark {
+          color: $cl-font-dark;
+        }
+      }
+    }
+  }
+
+  &_theme {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &--toggle {
+      &-switch {
+        position: relative;
+        display: inline-block;
+        width: 4rem;
+        height: 2rem;
+
+        & input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          &:checked + .slider {
+            background-color: $cl-accent;
+
+            &::before {
+              transform: translateX(1.4rem);
+            }
+          }
+        }
+
+        & .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $cl-accent;
+          border-radius: 10px;
+          transition: all 0.4s;
+
+          &::before {
+            position: absolute;
+            content: "";
+            height: 1.4rem;
+            width: 1.4rem;
+            left: 0.5rem;
+            top: 0.3rem;
+            background-color: $cl-bg-light;
+            border-radius: 50%;
+            z-index: 10;
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+  }
+}
+.show-menu {
+  opacity: 1;
+  transform: translateY(4rem);
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.hide-menu {
+  opacity: 0;
+  transform: translateY(0);
+  z-index: -2;
+  transition: all 0.2s;
+}
+
+.search-bar {
+  display: block;
+  position: relative;
+  margin-bottom: 4rem;
+
+  &_input {
+    width: 100%;
+    height: 6.4rem;
+    border-radius: 16px;
+    background-color: $cl-grey-light;
+    border: none;
+    font-size: 2rem;
+    color: #2d2d2d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2rem;
+    cursor: pointer;
+
+    &.dark {
+      background-color: $cl-grey-dark;
+      color: $cl-font-dark;
+
+      &::placeholder {
+        opacity: 1;
+        color: #757575;
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $cl-accent;
+
+      &::placeholder {
+        visibility: hidden;
+      }
+    }
+
+    &::placeholder {
+      font-size: 2rem;
+      color: #2d2d2d;
+      opacity: 0.2;
+    }
+  }
+
+  &_btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &_error {
+    position: absolute;
+    bottom: -3rem;
+    left: 1rem;
+    color: #ff5252;
+  }
+}
+
+.error {
+  outline: 2px solid #ff5252;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_icon {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+  }
+
+  &_heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &_text {
+    font-size: 1.8rem;
+    line-height: 24px;
+    text-align: center;
+    color: #757575;
+  }
+}
+
+.word {
+  &_heading {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 7rem;
+
+    & h1 {
+      font-size: 6.4rem;
+      color: #2d2d2d;
+      font-weight: bold;
+    }
+
+    &--phonetics {
+      font-size: 2.4rem;
+      color: #a445ed;
+      position: absolute;
+      bottom: -3rem;
+    }
+
+    & figure {
+      & button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_meaning {
+    margin-bottom: 2rem;
+    &--part-of-speech {
+      font-size: 2.4rem;
+      font-weight: bold;
+      font-style: italic;
+      position: relative;
+      margin-bottom: 3rem;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 85%;
+        height: 1px;
+        background-color: #e9e9e9;
+        position: absolute;
+        top: 50%;
+        right: 0;
+      }
+    }
+
+    &--list {
+      & h4 {
+        font-size: 2rem;
+        color: #757575;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      & li {
+        font-size: 1.8rem;
+        line-height: 24px;
+        color: #2d2d2d;
+        margin-left: 4rem;
+        margin-bottom: 0.5rem;
+
+        &:last-of-type {
+          margin-bottom: 3rem;
+        }
+
+        &::marker {
+          color: #a445ed;
+        }
+      }
+    }
+
+    &--synonyms {
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 2rem;
+      & h4 {
+        font-size: 2rem;
+        color: #757575;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      & p {
+        color: #a445ed;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.source-url {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 3rem;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e9e9e9;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+  }
+  & h4 {
+    font-size: 1.4rem;
+    color: #757575;
+    font-weight: 400;
+  }
+
+  & a {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    &:link p,
+    &:visited p {
+      font-size: 1.4rem;
+      color: #2d2d2d;
+    }
+  }
+}
+
+.content.dark {
+  & .word {
+    &_heading h1 {
+      color: $cl-font-dark;
+    }
+    &_meaning--list li {
+      color: $cl-font-dark;
+    }
+  }
+
+  & .source-url p {
+    color: $cl-font-dark;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.active-font {
+  font-weight: bold;
+}
+.sans-serif {
+  font-family: "Inter";
+}
+.serif {
+  font-family: "Lora";
+}
+.mono {
+  font-family: "Inconsolata";
+}

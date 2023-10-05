@@ -1,0 +1,315 @@
+@font-face {
+  font-family: "Jet Brains Mono";
+  src: url(starter-code/assets/fonts/static/JetBrainsMono-Bold.ttf), url(starter-code/assets/fonts/static/JetBrainsMono-BoldItalic.ttf);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 26.6em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Jet Brains Mono";
+  font-size: 1.8rem;
+  width: 100%;
+  height: 100%;
+  background-color: #18171f;
+  color: #e6e5ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+@media (max-width: 26.6em) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+.main-heading {
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  color: #817d92;
+}
+
+.password-display {
+  position: relative;
+  width: 54rem;
+  height: 8rem;
+  background-color: #24232c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+@media (max-width: 26.6em) {
+  .password-display {
+    width: 38rem;
+  }
+}
+.password-display_result {
+  font-size: 3.2rem;
+  color: #817d92;
+}
+.password-display_copy-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.password-display_copied {
+  position: absolute;
+  right: 5rem;
+  color: #a4ffaf;
+}
+
+.generator {
+  width: 54rem;
+  background-color: #24232c;
+  padding: 2rem 3rem;
+}
+@media (max-width: 26.6em) {
+  .generator {
+    width: 38rem;
+  }
+}
+.generator_length {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.generator_length--value {
+  position: absolute;
+  right: 0;
+  top: -1rem;
+  font-size: 3.2rem;
+  color: #a4ffaf;
+}
+.generator_length--label {
+  margin-bottom: 2rem;
+}
+.generator_length--input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  background: transparent;
+  margin-bottom: 3rem;
+}
+.generator_length--input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 14px;
+  background-color: #e6e5ea;
+  cursor: pointer;
+  margin-top: -1.1rem;
+  background: linear-gradient(#a4ffaf, #a4ffaf);
+  background-size: 30% 100%;
+}
+.generator_length--input::-moz-range-thumb {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 14px;
+  background-color: #e6e5ea;
+  cursor: pointer;
+}
+.generator_length--input::-ms-thumb {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 14px;
+  background-color: #e6e5ea;
+  cursor: pointer;
+}
+.generator_length--input:focus {
+  outline: none;
+}
+.generator_length--input:focus::-webkit-slider-thumb {
+  background: #18171f;
+  outline: 2px solid #a4ffaf;
+}
+.generator_length--input:focus ~ .generator_length--progress {
+  background: linear-gradient(90deg, #a4ffaf 94%, #18171f 80%);
+}
+.generator_length--input::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.generator_length--input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.8rem;
+  background: #18171f;
+}
+.generator_length--input::-moz-range-track {
+  width: 100%;
+  height: 0.8rem;
+  background: #18171f;
+}
+.generator_length--input::-ms-track {
+  width: 100%;
+  height: 0.8rem;
+  background: #18171f;
+}
+.generator_length--input::-ms-fill-lower {
+  height: 0.8rem;
+  background-color: #a4ffaf;
+}
+.generator_length--input::-moz-range-progress {
+  height: 0.8rem;
+  background-color: #a4ffaf;
+}
+.generator_length--input::-ms-fill-lower {
+  height: 0.8rem;
+  background-color: #a4ffaf;
+}
+.generator_length--progress {
+  position: absolute;
+  top: 4.3rem;
+  height: 0.8rem;
+  background: linear-gradient(90deg, #a4ffaf 100%, #18171f 100%);
+}
+.generator_options {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3rem;
+}
+.generator_options label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 2rem;
+}
+.generator_options input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border: 2px solid #e6e5ea;
+  display: grid;
+  place-content: center;
+}
+.generator_options input::before {
+  content: url(starter-code/assets/images/icon-check.svg);
+  padding-top: 0.5rem;
+  transform: scale(0);
+  transition: all 0.12s;
+}
+.generator_options input:checked::before {
+  transform: scale(1);
+}
+.generator_options input:checked {
+  background-color: #a4ffaf;
+}
+.generator_options .checkmark {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #e6e5ea;
+}
+.generator_strength {
+  width: 100%;
+  height: 7rem;
+  background-color: #18171f;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.generator_strength--heading {
+  text-transform: uppercase;
+  color: #817d92;
+}
+.generator_strength--level {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 26.6em) {
+  .generator_strength--level {
+    gap: 0.5rem;
+  }
+}
+.generator_strength--level-box {
+  width: 1rem;
+  height: 2.8rem;
+  border: 2px solid #e6e5ea;
+}
+.generator_strength--text {
+  position: absolute;
+  right: 21%;
+}
+@media (max-width: 26.6em) {
+  .generator_strength--text {
+    right: 25%;
+  }
+}
+.generator_btn {
+  width: 100%;
+  height: 6.5rem;
+  background: #a4ffaf;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.generator_btn--text {
+  font-family: "Jet Brains Mono";
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #24232c;
+}
+.generator_btn--icon {
+  fill: #24232c;
+}
+.generator_btn:hover {
+  background: #24232c;
+  border: 2px solid #a4ffaf;
+}
+.generator_btn:hover .generator_btn--text {
+  color: #a4ffaf;
+}
+.generator_btn:hover .generator_btn--icon {
+  fill: #a4ffaf;
+}
+
+.hidden {
+  display: none;
+}
+
+.too-weak {
+  background-color: #f64a4a;
+}
+
+.weak {
+  background-color: #fb7c58;
+}
+
+.medium {
+  background-color: #f8cd65;
+}
+
+.strong {
+  background-color: #a4ffaf;
+}/*# sourceMappingURL=style.css.map */

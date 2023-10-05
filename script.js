@@ -18,6 +18,8 @@ const challenges = [
   "crowdfunding-product-page-main",
   "tip-calculator-app-main",
   "github-user-search-app",
+  "dictionary-web-app",
+  "password-generator-app",
 ];
 
 const challengesList = document.querySelector(".challenges__list");
