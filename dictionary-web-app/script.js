@@ -48,7 +48,7 @@ const renderWordInfo = () => {
     <p class="word_heading--phonetics"></p>
     <figure>
     <button class="word_heading--phonetics-btn">
-       <img src="assets/images/icon-play.svg" alt="" />
+       <img src="starter-code/assets/images/icon-play.svg"  />
   </button>
   <audio class="audio" ></audio>
     </figure>
@@ -109,11 +109,11 @@ const renderWordInfo = () => {
           }
         }
         ////////////????????///////////
-        synonymsList[i].addEventListener("click", (e) => {
-          if (e.target.classList.contains("synonym"))
-            // getWordData(e.target.innerHTML);
-            console.log("da");
-        });
+        // synonymsList[i].addEventListener("click", (e) => {
+        //   if (e.target.classList.contains("synonym"))
+        // getWordData(e.target.innerHTML);
+
+        // });
       });
     });
   });
@@ -122,12 +122,10 @@ const renderWordInfo = () => {
   <h4>Source</h4>
   <a target="_blank" href="${wordData[0].sourceUrls[0]}"
     ><p>${wordData[0].sourceUrls[0]}</p>
-    <img src="assets/images/icon-new-window.svg" alt=""
+    <img src="starter-code/assets/images/icon-new-window.svg" 
   /></a>
 </div>`;
   contentCard.innerHTML += sourceUrlHTML;
-
-  console.log(contentCard);
 
   ////// Word Phonetics and Audio ///////
   const audioBtn = document.querySelector(".word_heading--phonetics-btn");
