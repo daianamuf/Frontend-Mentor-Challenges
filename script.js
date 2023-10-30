@@ -1,25 +1,29 @@
 "use strict";
 
 const challenges = [
-  "3-column-preview-card-component",
-  "four-card-feature-section",
-  "order-summary-component",
-  "single-price-grid-component",
-  "social-proof-section",
-  "skilled-elearning-landing-page",
-  "fylo-data-storage-component-master",
-  "huddle-landing-page-with-single-introductory-section-master",
-  "chat-app-css-illustration-master",
-  "interactive-rating-component-main",
-  "faq-accordion-card-main",
-  "intro-component-with-signup-form-master",
-  "expenses-chart-component-main",
-  "advice-generator-app-main",
-  "crowdfunding-product-page-main",
-  "tip-calculator-app-main",
-  "github-user-search-app",
-  "dictionary-web-app",
-  "password-generator-app",
+  { name: "3-column-preview-card-component", type: "vanilla" },
+  { name: "four-card-feature-section", type: "vanilla" },
+  { name: "order-summary-component", type: "vanilla" },
+  { name: "single-price-grid-component", type: "vanilla" },
+  { name: "social-proof-section", type: "vanilla" },
+  { name: "skilled-elearning-landing-page", type: "vanilla" },
+  { name: "fylo-data-storage-component-master", type: "vanilla" },
+  {
+    name: "huddle-landing-page-with-single-introductory-section-master",
+    type: "vanilla",
+  },
+  { name: "chat-app-css-illustration-master", type: "vanilla" },
+  { name: "interactive-rating-component-main", type: "vanilla" },
+  { name: "faq-accordion-card-main", type: "vanilla" },
+  { name: "intro-component-with-signup-form-master", type: "vanilla" },
+  { name: "expenses-chart-component-main", type: "vanilla" },
+  { name: "advice-generator-app-main", type: "vanilla" },
+  { name: "crowdfunding-product-page-main", type: "vanilla" },
+  { name: "tip-calculator-app-main", type: "vanilla" },
+  { name: "github-user-search-app", type: "vanilla" },
+  { name: "dictionary-web-app", type: "vanilla" },
+  { name: "password-generator-app", type: "vanilla" },
+  { name: "job-filter", type: "react" },
 ];
 
 const challengesList = document.querySelector(".challenges__list");
@@ -42,10 +46,15 @@ challenges.forEach((challenge) => {
   const link = document.createElement("a");
   const img = document.createElement("img");
 
-  link.href = `./${challenge}/index.html`;
-  link.innerText = challenge;
+  if (challenge.type === "vanilla") {
+    link.href = `./${challenge.name}/index.html`;
+  } else if (challenge.type === "react") {
+    link.href = `./${challenge.name}/dist/index.html`;
+  }
 
-  img.src = `${challenge}/design/desktop-design.jpg`;
+  link.innerText = challenge.name;
+
+  img.src = `${challenge.name}/design/desktop-design.jpg`;
 
   link.append(img);
   listItem.appendChild(link);
